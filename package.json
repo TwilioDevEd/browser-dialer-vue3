@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "serve:server": "nodemon ./server/index.js",
+    "serve:client": "cd ./client && npm run serve",
+    "serve": "concurrently \"npm run serve:server\" \"npm run serve:client\" -k"
+  },
   "devDependencies": {
     "concurrently": "^6.2.0"
   }
