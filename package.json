@@ -2,7 +2,8 @@
   "scripts": {
     "serve:server": "nodemon ./server/index.js",
     "serve:client": "cd ./client && npm run serve",
-    "serve": "concurrently \"npm run serve:server\" \"npm run serve:client\" -k"
+    "serve": "concurrently \"npm run serve:server\" \"npm run serve:client\" -k",
+    "postinstall": "(cd ./client && npm install); (cd ./server && npm install)"
   },
   "devDependencies": {
     "concurrently": "^6.2.0"
