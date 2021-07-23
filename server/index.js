@@ -1,5 +1,3 @@
-'use strict';
-
 const http = require('http');
 const express = require('express');
 const { urlencoded } = require('body-parser');
@@ -60,7 +58,7 @@ app.post('/voice', (request, response) => {
   const voiceResponse = new VoiceResponse();
   voiceResponse.dial({
     callerId: process.env.TWILIO_NUMBER,
-  }, request.body.number);
+  }, request.body.To);
 
   response.type('text/xml');
   response.send(voiceResponse.toString());
