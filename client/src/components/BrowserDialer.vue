@@ -1,16 +1,13 @@
 <template>
   <main>
     <h1>Twilio JavaScript Voice SDK - Vue3 Tutorial</h1>
-
     <div v-if="!deviceInitialized">
       <form>
         <input placeholder="Enter name" v-model="clientName" />
         <button :disabled="clientName == ''" @click.prevent="initializeDevice()">Initialize Device</button>
       </form>
     </div>
-
     <section class="browser-dialer" v-if="deviceInitialized"> 
-
       <div class="call-controls">
         <h2>Client Name: {{clientName}}</h2>
 
@@ -51,7 +48,6 @@
 
         </div>
 
-
       <!-- Keypad/DTMF Tone interface -->
       <div class="keypad">
         <ul class="keypad-keys">
@@ -86,7 +82,7 @@
 import { Device } from '@twilio/voice-sdk';
 
 export default {
-  name: 'HelloWorld',
+  name: 'BrowserDialer',
   props: {
     msg: String
   },

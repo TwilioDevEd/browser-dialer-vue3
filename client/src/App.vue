@@ -1,14 +1,14 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Browser-Dialer/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BrowserDialer from './components/BrowserDialer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BrowserDialer
   }
 }
 </script>
