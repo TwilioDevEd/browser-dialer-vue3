@@ -10,7 +10,6 @@ const corsOptions = {
 
 const VoiceResponse = require("twilio").twiml.VoiceResponse;
 const AccessToken = require("twilio").jwt.AccessToken;
-const { access } = require('fs');
 const VoiceGrant = AccessToken.VoiceGrant;
 
 let app = express();
@@ -21,7 +20,7 @@ app.use(express.json())
 
 
 app.get('/', (request, response) => {
-    response.send('Hello world')
+    response.send('Hello world?')
 
 })
 

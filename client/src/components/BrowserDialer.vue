@@ -91,7 +91,7 @@ export default {
       token: null,
       muted: false,
       logMessages: [],
-      currentNumber: null,
+      currentNumber: '',
       clientName: '',
       inputDigits: '',
       twilioCall: null,
@@ -160,7 +160,7 @@ export default {
       this.deviceInitialized = true;
     },
     makeCall: async function() {
-      this.log(`Attempting to call ${this.currentNumber} ...`);
+      this.log(`Calling ${this.currentNumber} ...`);
 
       var params = { To: this.currentNumber };
 
